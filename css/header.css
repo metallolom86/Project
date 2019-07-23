@@ -1,0 +1,133 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* 
+body {
+  font-size: 18px;
+  background-color: #ededef;
+  background-image: url(../img/novost-232.jpg);
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+} */
+
+.wrapper {
+  margin: 0 auto;
+}
+
+/* левое меню */
+
+.top-sidebar ul {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin: 0;
+  height: 70px;
+  width: 100vw;
+  list-style: none;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  outline: 2px solid #ededef;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 70px;
+  width: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid #d0d0d0;
+}
+
+.img-avatar {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.top-sidebar ul li {
+  margin: 0 auto;
+}
+
+
+.top-sidebar ul> :nth-child(4) {
+  margin-right: 10px;
+}
+
+.top-sidebar ul> :nth-child(5) {
+  margin-left: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+ul li {
+  user-select: none;
+}
+
+#user-name {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 321px) and (max-width: 767px) {
+  .top-sidebar ul li {
+      margin: 0 auto;
+  }
+  .top-sidebar ul> :nth-child(2) {
+      margin-right: 10px;
+  }
+  .top-sidebar ul> :nth-child(3) {
+      margin-left: 10px;
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+  .top-sidebar ul> :nth-child(6),
+  .top-sidebar ul> :last-child {
+      margin: 0 100px 0 80px;
+  }
+  .top-sidebar ul li {
+      padding: 0;
+      margin-right: 40px;
+  }
+  .top-sidebar ul> :nth-child(2) {
+      margin-right: 10px;
+  }
+  .top-sidebar ul> :first-child {
+      margin-left: 40px;
+      margin-right: auto;
+  }
+
+}
+
+.icon-plus,
+.icon-enter, .icon-exit {
+    font-size: 30px;
+}
+
+/* .icon-basket {
+    fill: #d8d8d8;
+} */
+li:hover .icon-basket{
+    fill: #0023ff;
+}
+.logosvg,
+li span:hover,
+li .icon-plus:hover,
+li .icon-basket:hover,
+li .icon-enter:hover, li .icon-exit:hover {
+    color: #0023ff;
+    cursor: pointer;
+}

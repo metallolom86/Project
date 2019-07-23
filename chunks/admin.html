@@ -1,0 +1,134 @@
+<link rel="stylesheet" href="css/icomoon.css">
+<link rel="stylesheet" href="css/normalize.css">
+<div class="wrapper">
+  <div class="but">
+    <button id="add-card"><span class="icon-plus"></span></button>
+    <button id="del"><span class="icon-minus"></button>
+    <button id="pen"><span class="icon-pen"></span></button>
+    <button id="search"><span class="icon-search"></span></button>
+  </div>
+  <div class="content">
+    <div class="add-card">
+      <form action="#" method="GET">
+        <label for="title" class="form-row">Title
+          <input id="title" type="text" placeholder="Title" autocomplete="off">
+        </label>
+        <label for="category" class="form-row">Category
+          <select id="category">
+            <option>sky</option>
+            <option>water</option>
+            <option>drive</option>
+            <option>other</option>
+            <option>mountains</option>
+          </select>
+        </label>
+        <label for="text" class="form-row">Text
+          <textarea id="text" name="text"></textarea>
+        </label>
+        <label for="price" class="form-row">Price
+          <input id="price" type="number" placeholder="$" autocomplete="off">
+        </label>
+        <section>
+          <img src="img/1.jpg" alt="" width="80">
+        </section>
+        <input type="file" name="file" id="file" class="inputfile">
+        <label for="file" class="form-file">Select photo</label>
+      </form>
+      <button id="add-submit">Add card</button>
+    </div>
+    <div class="del hidden">
+      <label for="items" class="form-row">
+        Items
+        <input id="items" type="text" placeholder="Title" autocomplete="off">
+      </label>
+      <button class="del-items">Search items</button>
+      <label for="users" class="form-row">Users
+        <input id="users" type="email" placeholder="Email" autocomplete="off">
+      </label>
+      <button class="del-users">Search users</button>
+      <div class="center">
+        <div class="img"><img src="" alt="" class="del-img"></div>
+        <p class="del-p">ID: </p>
+      </div>
+      <label for="category-del" class="form-row">Category
+        <select id="category-del">
+          <option>users</option>
+          <option>items</option>
+        </select>
+        <input type="number" id="number">
+        <button class="del-submit">Del</button>
+      </label>
+    </div>
+    <div class="pen hidden">
+
+      <label for="pen-items" class="form-row">
+        Items
+        <input id="pen-items" type="text" placeholder="Title" autocomplete="off">
+      </label>
+      <button class="pen-search">Search items</button>
+      
+      <section>
+        <img src="img/1.jpg" alt="" width="100" class="pen-img">
+      </section>
+      <input type="file" name="file" id="pen-file" class="inputfile">
+      <label for="pen-file" class="pen-file">Select photo</label>
+
+      <label for="pen-title" class="form-row">Title
+        <input id="pen-title" type="text" placeholder="Title" autocomplete="off">
+      </label>
+      <label for="pen-category" class="form-row">Category
+        <select id="pen-category">
+          <option>sky</option>
+          <option>water</option>
+          <option>drive</option>
+          <option>other</option>
+          <option>mountains</option>
+          <option>no</option>
+        </select>
+      </label>
+      <label for="pen-text" class="form-row">Text
+        <input type="text" id="pen-text" placeholder="Text"> 
+      </label>
+      <label for="pen-price" class="form-row">Price
+        <input id="pen-price" type="number" placeholder="$" autocomplete="off">
+      </label>
+      <span class="pen-id hidden"></span>
+      <button id="pen-submit">Change</button>
+    </div>
+    <div class="search hidden">
+      <h3>ORDERS</h3>
+      <label for="done" class="form-row">Done
+        <select id="done">
+          <option>true</option>
+          <option>false</option>
+        </select>
+      </label>
+      <button class="search-done">Search</button>
+      <div>
+        <label for="orders-user" class="form-row">User
+          <input id="orders-user" type="text" placeholder="User" autocomplete="off">
+        </label>
+      </div>
+      <div>
+        <label for="orders-date" class="form-row">Date
+          <input id="orders-date" type="text" placeholder="Date" autocomplete="off">
+        </label>
+      </div>
+      <button class="search-order">Search</button>
+      <label for="category-done" class="form-row">Order
+        <select id="category-done">
+          <option>true</option>
+          <option>false</option>
+        </select>
+        <input type="number" id="number-order">
+        <button class="change-order">Change</button>
+      </label>
+      <p class="num-order-del"></p>
+      <label for="order-number" class="form-row">Order
+        <input type="number" id="order-number">
+        <button class="order-number-del">Del</button>
+      </label>
+      <button class="show-all">Show all users</button>
+    </div>
+  </div>
+</div>

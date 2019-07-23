@@ -1,0 +1,366 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  color: #d0d0d0;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+  height: calc(100% - 70px);
+  margin: 0;
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.but {
+  display: flex;
+  flex-direction: column;
+  height: 595px;
+  margin-right: 25px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.but button {
+  height: 20%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.add-card {
+  width: 320px;
+  border: 2px solid #d0d0d0;
+  border-radius: 25px;
+  padding: 25px 25px 0 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.reg-btn,
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+.reg-btn {
+  width: 320px;
+}
+
+label {
+  user-select: none;
+}
+
+.add-card button,
+.inputfile + label,
+.reg-btn button {
+  font-size:18px;
+  background-color: #0023ff;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  user-select: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 2px 2px 5px #000000;
+  transition: 0.2s;
+}
+
+.inputfile + label:active,
+.add-card button:active,
+.reg-btn button:active {
+  transform: scale(0.97);
+  box-shadow: inset 2px 2px 5px #000000;
+}
+
+#category,
+textarea,
+input {
+  width: 200px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+textarea:focus,
+input:focus {
+  box-shadow: 2px 2px 5px #000000;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.reg-ok{
+  text-align: center;
+  color: #0023ff;
+  transition: 0.2s;
+}
+
+.show-error{
+  padding: 5px 10px;
+  width: 320px;
+  border: 2px solid red;
+  border-radius: 25px;
+  text-align: center;
+  color: red;
+  margin-top: 0;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: absolute;
+}
+
+.pen-file,
+.form-file {
+  width: 150px;
+  text-align: center;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+form img {
+  width: 100px;
+  max-height: 100px;
+}
+
+#add-submit {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 90%;
+}
+
+section {
+  border: 2px solid #d0d0d0;
+  width: 100px;
+  border-radius: 30px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  margin: 0 auto 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  height:150px;
+  border-radius: 10px;
+}
+
+/* del */ 
+.pen,
+.search,
+.del {
+  background-color: #ffffff;
+  width: 320px;
+  height: 595px;
+  border: 2px solid #d0d0d0;
+  border-radius: 25px;
+  padding: 15px 15px 0 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 1s;
+}
+
+option,
+select,
+input {
+  border: 1px solid #d0d0d0;
+  padding: 5px 10px;
+  outline: none;
+  background: none;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.add-card select input{
+  border: 1px solid #d0d0d0;
+  font-size: 18px;
+  outline: none;
+}
+
+select:focus,
+input:focus {
+  box-shadow: 2px 2px 5px #000000;
+  outline: none;
+  background: none;
+}
+
+select option{
+  border-radius: 10px;
+}
+section {
+  border: 2px solid #d0d0d0;
+  width: 100px;
+  border-radius: 30px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  margin: 0 auto 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.img{
+  width: 200px;
+  height: 200px;
+  border: 2px solid #d0d0d0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#order-number,
+#number-order,
+#number {
+  width: 70px;
+}
+
+.center{
+  align-self: center;
+}
+
+button {
+  background-color: #0023ff;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  user-select: none;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #000000;
+  transition: 0.2s;
+  align-self: center;
+}
+
+.content button {
+  padding: 10px 20px;
+}
+
+button:active {
+  transform: scale(0.97);
+  box-shadow: inset 2px 2px 5px #000000;
+}
+.pen-search,
+.del-users,
+.del-items {
+  margin-bottom: 20px;
+  width: 150px;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+#category-del{
+  width: 60px;
+  padding: 5px 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-item {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.search-item p {
+  padding: 5px;
+  margin: 0 0 20px 0;
+}
+
+#search-num{
+  width: 90px;
+}
+
+#category-done,
+#order,
+#change,
+#search-category {
+  width: 80px;
+  padding: 5px 10px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#search-input{
+  width: 98%;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+}
+.pen-items,
+.search-order,
+.search-done,
+.search-send {
+  margin-bottom: 20px;
+}
+.search-row,
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.change-item {
+  text-align: center;
+}
+
+.search{
+  padding-top: 0;
+}
+
+#category-done{
+  width: 60px;
+}
+
+h3{
+  text-align: center;
+}
+
+#pen-category,
+#done {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
