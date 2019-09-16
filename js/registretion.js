@@ -322,6 +322,16 @@ class Authorization extends HTMLElement {
       event.target.style.color = event.target.valid ? "blue" : "red"
       submit[1].disabled = !event.target.valid
     }
+    let password = [shadow.querySelector("#password"), shadow.querySelector("#pass-2")]
+    password.forEach((elem,index) => 
+      elem.onkeyup =  function (event){
+        event.keyCode === 13 ? submit[index].click() : null
+      }
+    );
+   
+  
+
+
 
     async function regPostValidator() {
       let response = await (

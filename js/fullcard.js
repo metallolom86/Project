@@ -303,6 +303,7 @@ class Fullcard extends HTMLElement {
     let price = this.shadow.querySelector(".price");
     let cardId = this.shadow.querySelector("#card-id");
     let user = JSON.parse(localStorage["userInfo"])
+    const url = "https://fea13-anton.glitch.me/orders";
 
     img.src = info.photo;
     title.textContent = info.title;
@@ -354,7 +355,7 @@ class Fullcard extends HTMLElement {
         return [mass[1], mass[0], mass[2]].join(".")
       }
       let prc = info.price * input.value
-      fetch("https://fea13-anton.glitch.me/orders", {
+      fetch(url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

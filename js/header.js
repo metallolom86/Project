@@ -31,6 +31,7 @@ class Headertop extends HTMLElement {
     let plus = this.shadow.querySelector(".plus");
     let iconPlus = this.shadow.querySelector(".icon-plus");
     let user
+    const url = "https://fea13-anton.glitch.me/users/";
 
     function showEnter() {
       [ava, nameli, exit].forEach(item => item.classList.remove("hidden"));
@@ -58,7 +59,7 @@ class Headertop extends HTMLElement {
         typeof mail === "string" ? Userinfo(id) : null
 
       async function Userinfo(id) {
-        user = await (await fetch(`https://fea13-anton.glitch.me/users/${id}`)).json()
+        user = await (await fetch(`${url}${id}`)).json()
 
         user.id != id ? resetCookie() :
           user.email != mail ? resetCookie() : login()
@@ -84,7 +85,7 @@ class Headertop extends HTMLElement {
       userLS.role === "admin" ? checkAdmin() : null;
       document.body.removeEventListener("registration", login)
       async function checkAdmin() {
-        let admin = await (await fetch(`https://fea13-anton.glitch.me/users/${userLS.id}`)).json()
+        let admin = await (await fetch(`${url}${userLS.id}`)).json()
         admin.role === userLS.role ? addRoleAdmin() : null
       }
     }

@@ -28,6 +28,7 @@ class UserAcc extends HTMLElement {
     let okEmail = this.shadow.querySelector(".ok-email");
     let okTel = this.shadow.querySelector(".ok-tel");
     let inputs = this.shadow.querySelectorAll("input")
+    const url = "https://fea13-anton.glitch.me/users/";
 
     document.body.addEventListener("userinfo", getUSerInfo);
 
@@ -57,7 +58,7 @@ class UserAcc extends HTMLElement {
 
     changeAvatar.onclick = async function (event) {
       let response = await (
-        await fetch(`https://fea13-anton.glitch.me/users/${user.id}`, {
+        await fetch(`${url}${user.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json"
@@ -80,7 +81,7 @@ class UserAcc extends HTMLElement {
 
     okLogin.onclick = async function (event) {
       let response = await (
-        await fetch(`https://fea13-anton.glitch.me/users/${user.id}`, {
+        await fetch(`${url}${user.id}`, {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json"
@@ -106,14 +107,14 @@ class UserAcc extends HTMLElement {
 
     okEmail.onclick = async function (event) {
       let response = await (
-        await fetch(`https://fea13-anton.glitch.me/users`)
+        await fetch(url)
       ).json()
       let reg = response.some(user => user.email === inputEmail.value.toLowerCase())
       reg === false ? changeEmail() : mail.textContent = "Email already exists"
 
       async function changeEmail() {
         let response = await (
-          await fetch(`https://fea13-anton.glitch.me/users/${user.id}`, {
+          await fetch(`${url}${user.id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json"
@@ -134,7 +135,7 @@ class UserAcc extends HTMLElement {
       inputtel.value.length < 9 ? null : send()
       async function send() {
         let response = await (
-          await fetch(`https://fea13-anton.glitch.me/users/${user.id}`, {
+          await fetch(`${url}${user.id}`, {
             method: "PATCH",
             headers: {
               "Content-Type": "application/json"
@@ -159,7 +160,7 @@ class UserAcc extends HTMLElement {
     let del = this.shadow.querySelector(".delete")
     del.onclick = async function (event) {
       let info = await (
-        await fetch("https://fea13-anton.glitch.me/users")).json();
+        await fetch(url)).json();
       let admin = info.find(x => x.email === user.email);
       admin.role == "admin" ? adminNoDel() : dele()
     }
@@ -168,7 +169,7 @@ class UserAcc extends HTMLElement {
       setTimeout(() => login.textContent = user.login, 5000)
     }
     function dele() {
-      fetch(`https://fea13-anton.glitch.me/users/${user.id}`, { method: "DELETE" });
+      fetch(`${url}${user.id}`, { method: "DELETE" });
       document.body.dispatchEvent(new CustomEvent("delete"));
     }
 
